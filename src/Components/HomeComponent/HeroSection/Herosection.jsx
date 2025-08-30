@@ -1,38 +1,3 @@
-// import React, { useEffect, useState } from 'react';
-// import { images } from '../../../assets/images'; // adjust as needed
-// import './Herosection.css';
-
-// function SliderLeftRight() {
-//   const imageList = [images.Meshdoor, images.Meshdoor2, images.CR1, images.CR2, images.AW1, images.AW2, images.AW3];
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentIndex((prev) => (prev + 1) % imageList.length);
-//     }, 5500); // ⏱️ 11.5 seconds (10s pause + 1.5s scroll)
-
-//     return () => clearInterval(interval);
-//   }, [imageList.length]);
-
-//   return (
-//     <div className="slider-container">
-//       <div
-//         className="slider-track"
-//         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-//       >
-//         {imageList.map((img, index) => (
-//           <div className="slide" key={index}>
-//             <img src={img} alt={`slide-${index}`} />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default SliderLeftRight;
-
-
 
 import React, { useEffect, useRef, useState } from 'react';
 import { images } from '../../../assets/images'; // adjust path as needed
@@ -40,8 +5,8 @@ import './Herosection.css';
 
 function SliderCarousel() {
   const originalImages = [
-    images.Meshdoor, images.Meshdoor2, images.CR1,
-    images.CR2, images.AW1, images.AW2, images.AW3,
+    images.Meshdoor, images.AW2, images.CR1,
+    images.AW1, images.Meshdoor2, images.AW3,
   ];
 
   // Clone first image to make infinite loop
@@ -82,7 +47,7 @@ function SliderCarousel() {
              <div className="carousel-slider" ref={sliderRef}>
          {imageList.map((img, i) => (
            <div className="carousel-slide" key={i}>
-             <img src={img} alt={`carousel-${i}`} />
+             <img src={img} alt={`carousel-${i}`} className='h-[70vh] w-50'/>
            </div>
          ))}
       </div>
