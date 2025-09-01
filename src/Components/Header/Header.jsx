@@ -50,7 +50,7 @@ function Header() {
         </ul>
 
         {/* Hamburger (Mobile) */}
-        <div className='md:hidden text-white z-50' onClick={() => setOpen(!open)}>
+        <div className='md:hidden text-[#2fc8c0] z-50' onClick={() => setOpen(!open)}>
           {open ? <null></null> : <Menu size={28} />}
         </div>
 
@@ -62,7 +62,7 @@ function Header() {
 
           {/* Logo top-left */}
           <div className='absolute top-4 left-4'>
-            <img src={images.sbl} alt='logo' className='w-24' />
+            <img src={images.slogo} alt='logo' className='w-24' />
           </div>
 
           {/* Centered Menu Container */}
